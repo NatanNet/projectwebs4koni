@@ -5,6 +5,8 @@
 
 <!-- HERO / BAGIAN ATAS DENGAN BACKGROUND + SEARCH BAR -->
 <section class="hero-section position-relative">
+   <!-- Tambahkan file lain jika ada -->
+   <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
   <div class="hero-overlay"></div>
   <div class="hero-content text-center">
     <h1 class="fw-bold">Olahraga Saya</h1>
@@ -23,42 +25,48 @@
 </section>
 
 <!-- SECTION: UPCOMING EVENTS (3 Gambar) -->
-<section class="py-5">
+ <section id="upcoming-events" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Upcoming Events</h2>
     <div class="row">
       @foreach($upcomingEvents as $event)
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="{{ asset('images/' . $event['image']) }}" class="card-img-top" alt="{{ $event['title'] }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ $event['title'] }}</h5>
-              <p class="card-text">Date: {{ $event['date'] }}</p>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <a href="{{ route('events.show', ['event' => $event['id']]) }}">
+      <img src="{{ asset('images/' . $event['image']) }}" class="card-img-top" alt="{{ $event['title'] }}">
+    </a>
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ $event['title'] }}</h5>
+      <p class="card-text">Date: {{ $event['date'] }}</p>
+    </div>
+  </div>
+</div>
+
       @endforeach
     </div>
   </div>
 </section>
 
 <!-- SECTION: SPORTS CATEGORIES (Secara Vertikal) -->
-<section class="py-5 bg-light">
+<section id="Sports" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Popular Sports</h2>
-    <div class="vertical-sports row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="row">
       @foreach($sportsCategories as $sports)
-        <div class="col">
-          <div class="card h-100 text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 text-center">
+          <a href="{{ route('sports.show', ['id' => $sports['id']]) }}">
             <img src="{{ asset('images/' . $sports['image']) }}" class="card-img-top" alt="{{ $sports['name'] }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ $sports['name'] }}</h5>
-            </div>
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ $sports['name'] }}</h5>
           </div>
         </div>
+      </div>
       @endforeach
     </div>
   </div>
 </section>
+
 
 @endsection

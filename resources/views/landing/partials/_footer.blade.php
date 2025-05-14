@@ -5,21 +5,20 @@
   </div>
 </footer>
 
-<!-- resources/views/landing/partials/_footer.blade.php -->
 <!-- SECTION: CREATE AN EVENT -->
 <section class="py-5" style="background-color: #1f1b37;">
   <div class="container text-center text-white">
     <h2 class="mb-3">Create an event with SportEase</h2>
     <p class="mb-4">
-      Got a show, event, activity or a great experience? Partner with us & get listed on Eventify
+      Got a show, event, activity or a great experience? Partner with us & get listed on SportEase
     </p>
-    <a href="#" class="btn btn-warning fw-bold">Create Event</a>
+    <a href="#" class="btn btn-primary fw-bold text-white">Create Event</a> <!-- Tambahkan kelas text-white -->
   </div>
 </section>
 
 <!-- SECTION: NEWSLETTER SUBSCRIBE -->
-<section class="py-5" style="background-color: #ffd426;">
-  <div class="container">
+<section class="py-5" style="background-color:rgb(0, 47, 255);">
+  <div class="container text-white"> <!-- Tambahkan text-white di sini -->
     <div class="row align-items-center">
       <div class="col-md-6">
         <h3 class="mb-2">Subscribe to our Newsletter</h3>
@@ -27,8 +26,8 @@
       </div>
       <div class="col-md-6 mt-3 mt-md-0">
         <form class="d-flex">
-          <input type="email" class="form-control form-control-lg me-2" placeholder="Enter your e-mail address">
-          <button class="btn btn-dark fw-bold px-4">Subscribe</button>
+          <input type="email" class="form-control form-control-lg me-2 text-white" placeholder="Enter your e-mail address"> <!-- Tambahkan text-white di input -->
+          <button class="btn btn-dark fw-bold px-4 text-white">Subscribe</button> <!-- Tambahkan text-white di tombol -->
         </form>
       </div>
     </div>
@@ -104,4 +103,3 @@
     </div>
   </div>
 </footer>
-

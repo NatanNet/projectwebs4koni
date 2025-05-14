@@ -13,38 +13,40 @@ class LandingController extends Controller
 
         $upcomingEvents = [
             [
-                'title' => 'Concert & Music Fest',
-                'image' => 'events/concert.jpg',
-                'date'  => '12 April 2025'
+                'id' => 1,
+                'title' => 'Marathon 2025',
+                'date' => '2025-05-10',
+                'image' => 'marathon.jpg'
             ],
             [
-                'title' => 'Startup Workshop',
-                'image' => 'events/workshop.jpg',
-                'date'  => '18 April 2025'
+                'id' => 2,
+                'title' => 'Soccer Championship',
+                'date' => '2025-06-15',
+                'image' => 'soccer.jpg'
             ],
             [
-                'title' => 'Charity Run',
-                'image' => 'events/charity.jpg',
-                'date'  => '25 April 2025'
+                'id' => 3,
+                'title' => 'Basketball Tournament',
+                'date' => '2025-07-20',
+                'image' => 'basketball.jpg'
             ],
         ];
 
         $sportsCategories = [
             [
-                'name' => 'Sepak Bola',
-                'image' => 'sports/soccer.jpg'
+                'id' => 1,
+                'name' => 'Soccer',
+                'image' => 'soccer-category.jpg'
             ],
             [
-                'name' => 'Basket',
-                'image' => 'sports/basketball.jpg'
+                'id' => 2,
+                'name' => 'Basketball',
+                'image' => 'basketball-category.jpg'
             ],
             [
-                'name' => 'Bulu Tangkis',
-                'image' => 'sports/badminton.jpg'
-            ],
-            [
-                'name' => 'Lari',
-                'image' => 'sports/running.jpg'
+                'id' => 3,
+                'name' => 'Running',
+                'image' => 'running-category.jpg'
             ],
         ];
 

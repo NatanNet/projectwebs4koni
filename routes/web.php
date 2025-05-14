@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SportsController;
 
 // 1) Home -> Landing Page
 Route::get('/', [LandingController::class, 'index'])->name('landing');
@@ -36,3 +37,7 @@ Route::post('/signup', [AuthController::class, 'register'])->name('signup.submit
 // 7) Search -> Pencarian event / olahraga
 Route::get('/search', [LandingController::class, 'search'])->name('search');
 
+// 8) detail events
+Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');
+
+Route::get('/sports/{id}', [SportsController::class, 'show'])->name('sports.show');

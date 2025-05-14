@@ -7,6 +7,10 @@
     <meta name="description" content="Landing Page Events dengan Laravel 12, menampilkan event mendatang & kategori olahraga">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- index.css -->
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
+
     <!-- Contoh pakai Bootstrap 5 via CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
@@ -40,7 +44,7 @@
         }
         .nav-link.active {
             position: relative; 
-            border-bottom: 3px solid #FFD426; /* contoh warna kuning */
+            border-bottom: 3px solid rgb(42, 81, 255); /* contoh warna biru */
         }
         .nav-link.active::after {
   content: "";
@@ -49,7 +53,7 @@
   right: 0;
   bottom: -4px; /* Jarak antara teks & garis */
   height: 3px;
-  background-color: #FFD426; /* Warna kuning */
+  background-color:rgb(35, 50, 248); /* Warna Biru */
   margin: 0 auto;
   width: 100%;
 }
