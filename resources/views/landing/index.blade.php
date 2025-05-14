@@ -25,38 +25,40 @@
 </section>
 
 <!-- SECTION: UPCOMING EVENTS (3 Gambar) -->
- <section id="upcoming-events" class="py-5">
+<section id="upcoming-events" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Upcoming Events</h2>
     <div class="row">
-      @foreach($upcomingEvents as $event)
+      @foreach($upcomingEvents as $index => $event)
       <div class="col-md-4 mb-4">
-  <div class="card h-100">
-    <a href="{{ route('events.show', ['event' => $event['id']]) }}">
-      <img src="{{ asset('images/' . $event['image']) }}" class="card-img-top" alt="{{ $event['title'] }}">
-    </a>
-    <div class="card-body text-center">
-      <h5 class="card-title">{{ $event['title'] }}</h5>
-      <p class="card-text">Date: {{ $event['date'] }}</p>
-    </div>
-  </div>
-</div>
-
+        <div class="card h-100">
+          <a href="{{ route('events.show', ['event' => $event['id']]) }}">
+            <!-- Gambar berdasarkan urutan -->
+            <img src="{{ asset('images/' . ($index == 0 ? 'g3.jpg' : ($index == 1 ? 'bg1landingpage.jpg' : 'maraton.jpg'))) }}" class="card-img-top" alt="Event Image">
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ $event['title'] }}</h5>
+            <p class="card-text">Date: {{ $event['date'] }}</p>
+          </div>
+        </div>
+      </div>
       @endforeach
     </div>
   </div>
 </section>
+
 
 <!-- SECTION: SPORTS CATEGORIES (Secara Vertikal) -->
 <section id="Sports" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Popular Sports</h2>
     <div class="row">
-      @foreach($sportsCategories as $sports)
+      @foreach($sportsCategories as $index => $sports)
       <div class="col-md-4 mb-4">
         <div class="card h-100 text-center">
           <a href="{{ route('sports.show', ['id' => $sports['id']]) }}">
-            <img src="{{ asset('images/' . $sports['image']) }}" class="card-img-top" alt="{{ $sports['name'] }}">
+            <!-- Gambar berdasarkan urutan -->
+            <img src="{{ asset('images/' . ($index == 0 ? 'g3.jpg' : ($index == 1 ? 'bg1landingpage.jpg' : 'maraton.jpg'))) }}" class="card-img-top" alt="{{ $sports['name'] }}">
           </a>
           <div class="card-body">
             <h5 class="card-title">{{ $sports['name'] }}</h5>
@@ -67,6 +69,7 @@
     </div>
   </div>
 </section>
+
 
 
 @endsection
