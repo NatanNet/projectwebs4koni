@@ -9,7 +9,7 @@
    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
   <div class="hero-overlay"></div>
   <div class="hero-content text-center">
-    <h1 class="fw-bold">Olahraga Saya</h1>
+    <h1 class="fw-bold">Olahraga Sayaaa</h1>
     <p class="lead mb-4">Explore the vibrant events happening locally and globally</p>
 
     <!-- SEARCH FORM -->
@@ -24,7 +24,7 @@
   </div>
 </section>
 
-<!-- SECTION: UPCOMING EVENTS (3 Gambar) -->
+<!-- SECTION: UPCOMING EVENTS (ada 3 Gambar) -->
 <section id="upcoming-events" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Upcoming Events</h2>
@@ -33,8 +33,8 @@
       <div class="col-md-4 mb-4">
         <div class="card h-100">
           <a href="{{ route('events.show', ['event' => $event['id']]) }}">
-            <!-- Gambar berdasarkan urutan -->
-            <img src="{{ asset('images/' . ($index == 0 ? 'g3.jpg' : ($index == 1 ? 'bg1landingpage.jpg' : 'maraton.jpg'))) }}" class="card-img-top" alt="Event Image">
+            <!-- Gambar  -->
+            <img src="{{ asset('images/' . ($index == 0 ? 'btangkis2.jpeg' : ($index == 1 ? 'soccer3.jpeg' : 'basket6.jpg'))) }}" class="card-img-top" alt="Event Image">
           </a>
           <div class="card-body text-center">
             <h5 class="card-title">{{ $event['title'] }}</h5>
@@ -58,7 +58,7 @@
         <div class="card h-100 text-center">
           <a href="{{ route('sports.show', ['id' => $sports['id']]) }}">
             <!-- Gambar berdasarkan urutan -->
-            <img src="{{ asset('images/' . ($index == 0 ? 'g3.jpg' : ($index == 1 ? 'bg1landingpage.jpg' : 'maraton.jpg'))) }}" class="card-img-top" alt="{{ $sports['name'] }}">
+            <img src="{{ asset('images/' . ($index == 0 ? 'soccer1.jpeg' : ($index == 1 ? 'basket10.jpg' : 'maraton.jpg'))) }}" class="card-img-top" alt="{{ $sports['name'] }}">
           </a>
           <div class="card-body">
             <h5 class="card-title">{{ $sports['name'] }}</h5>

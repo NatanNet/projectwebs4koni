@@ -12,7 +12,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SportsController;
 
 // 1) Home -> Landing Page
-Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::get('/index', [LandingController::class, 'index'])->name('landing');
 
 // 2) Events -> Halaman daftar event
 Route::get('/events', [EventController::class, 'index'])->name('events.index');

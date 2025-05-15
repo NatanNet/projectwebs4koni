@@ -14,8 +14,8 @@ class LandingController extends Controller
         $upcomingEvents = [
             [
                 'id' => 1,
-                'title' => 'Marathon 2025',
-                'date' => '2025-05-10',
+                'title' => 'Bulu Tangkis 2025',
+                'date' => '2025-06-10',
                 'image' => 'marathon.jpg'
             ],
             [
